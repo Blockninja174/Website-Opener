@@ -15,12 +15,20 @@ def browser():
         print("Browser not found, please check config.py")
 
 print("Default browser is " + config.default_browser)
-name = input("What is the website you would like to open?")
-if name in websites:
-    webbrowser.get(browser()).open(websites[name.lower()])
-elif name == ("exit") or ("quit"):
-    exit()
-elif "." in name:
-    webbrowser.get(browser()).open(name.lower())
-else:
-    webbrowser.get(browser()).open(name.lower() + ".com")
+def main():
+    name = input("What is the website you would like to open?")
+    if name in websites:
+        print("Opening " + name + "...")
+        webbrowser.get(browser()).open(websites[name])
+    elif "." in name:
+        print("Opening " + name + "...")
+        webbrowser.get(browser()).open("https://" + name)
+    elif name == "exit" or name == "quit":
+        exit()
+    else:
+        webbrowser.get(browser()).open("https://www.google.com/search?q=" + name)
+
+main()
+while config.repeat == True:
+    main()
+

@@ -1,5 +1,4 @@
 # This the the configuration file for Website Opener
-# You should only need to edit if you want to change the default settings
 
 # The default browser to use
 # Default: chrome
@@ -11,3 +10,8 @@ opera_path = "C:/Program Files/Opera/launcher.exe %s"
 firefox_path = "C:/Program Files/Mozilla Firefox/firefox.exe %s"
 edge_path = "C:/Program Files/Microsoft/Edge/Application/msedge.exe %s"
 ie_path = "C:/Program Files/Internet Explorer/iexplore.exe %s"
+
+# If the program should keep running in the background.
+# Default: False
+# Options: True, False
+repeat = False
