@@ -20,13 +20,19 @@ def main():
     if name in websites:
         print("Opening " + name + "...")
         webbrowser.get(browser()).open(websites[name])
+        if config.repeat == False:
+            exit()
     elif "." in name:
         print("Opening " + name + "...")
         webbrowser.get(browser()).open("https://" + name)
+        if config.repeat == False:
+            exit()
     elif name == "exit" or name == "quit":
         exit()
     else:
         webbrowser.get(browser()).open("https://www.google.com/search?q=" + name)
+        if config.repeat == False:
+            exit()
 
 main()
 while config.repeat == True:
