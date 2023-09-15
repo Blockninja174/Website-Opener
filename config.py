@@ -12,6 +12,7 @@ edge_path = "C:/Program Files/Microsoft/Edge/Application/msedge.exe %s"
 ie_path = "C:/Program Files/Internet Explorer/iexplore.exe %s"
 
 # If the program should keep running in the background.
+# Will automatically close when you enter search.
 # Default: False
 # Options: True, False
 repeat = False
